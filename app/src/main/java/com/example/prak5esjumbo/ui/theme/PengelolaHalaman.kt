@@ -90,6 +90,7 @@ fun EsJumboApp(
                     }
                 )
             }
+
             composable(route = PengelolaHalaman.Rasa.name) {
                 val context = LocalContext.current
                 HalamanSatu(
@@ -105,6 +106,7 @@ fun EsJumboApp(
                     modifier = Modifier
                 )
             }
+
             composable(route = PengelolaHalaman.Summary.name) {
                 HalamanDua(
                     orderUIState = uiState,
