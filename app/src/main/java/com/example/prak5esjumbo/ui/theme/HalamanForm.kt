@@ -86,6 +86,10 @@ fun HalamanForm(
         Spacer(modifier = Modifier.padding(16.dp))
 
         Row{
+            Button(onClick = { onCancelButtonClick() }) {
+                Text(text = "Batal")
+            }
+            Spacer(modifier = Modifier.padding(35.dp))
 
             Button(onClick =  { onSubmitButtonClick(listDataTxt) }) {
                 Text(text = stringResource(R.string.btn_submit))
