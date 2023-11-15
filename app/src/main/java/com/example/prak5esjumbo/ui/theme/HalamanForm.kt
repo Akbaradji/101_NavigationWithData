@@ -83,7 +83,14 @@ fun HalamanForm(
         },
             placeholder = { Text(text = "Masukkan Alamat Pelanggan")}
         )
+        Spacer(modifier = Modifier.padding(16.dp))
 
+        Row{
+
+            Button(onClick =  { onSubmitButtonClick(listDataTxt) }) {
+                Text(text = stringResource(R.string.btn_submit))
+            }
+        }
     }
 }
 
