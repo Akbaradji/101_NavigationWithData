@@ -30,11 +30,13 @@ import com.example.navdata.ui.HalamanSatu
 import com.example.navdata.ui.OrderViewModel
 import com.example.prak5esjumbo.R
 import com.example.prak5esjumbo.data.SumberData.flavors
+import com.example.prak5esjumbo.ui.theme.HalamanForm
 import com.example.prak5esjumbo.ui.theme.HalamanHome
 
 
 enum class PengelolaHalaman {
     Home,
+    Formulir,
     Rasa,
     Summary
 }
@@ -90,7 +92,13 @@ fun EsJumboApp(
                     }
                 )
             }
-
+            composable(route = PengelolaHalaman.Formulir.name){
+                HalamanForm(
+                    onSubmitButtonClick = {viewModel.setContact(it)
+                        navController.navigate(PengelolaHalaman.Rasa.name)
+                    },
+                    onCancelButtonClick = {navController.popBackStack()} )
+            }
             composable(route = PengelolaHalaman.Rasa.name) {
                 val context = LocalContext.current
                 HalamanSatu(
