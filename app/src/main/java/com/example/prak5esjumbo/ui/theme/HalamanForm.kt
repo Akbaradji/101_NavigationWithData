@@ -52,7 +52,12 @@ fun HalamanForm(
             .padding(16.dp)
             .fillMaxSize()
     ){
-
+        Text(
+            text = "Data Pelanggan",
+            fontWeight = FontWeight.Bold,
+            fontSize = 24.sp,
+            modifier = Modifier.padding(bottom = 16.dp)
+        )
         OutlinedTextField(value = namaTxt, onValueChange = {
             namaTxt = it
         }, label = {
