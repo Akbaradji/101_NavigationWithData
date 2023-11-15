@@ -60,7 +60,7 @@ fun HalamanHome (
                 Text(
                     text = "Gembrunggung",
                     color = Color.DarkGray,
-                    fontSize = 60.sp,
+                    fontSize = 50.sp,
                     fontWeight = FontWeight.Bold
                 )
             }
